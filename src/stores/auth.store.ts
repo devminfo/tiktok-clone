@@ -1,6 +1,5 @@
-import { localStorageHelper } from '~helpers/local-storage'
-import { authService } from '~services/auth.service'
-import { AuthUser, Login, Register } from '~types/auth.type'
+import { authService } from '../services/auth.service'
+import { AuthUser, Login, Register } from '../types/auth.type'
 
 export const useAuthStore = defineStore('auth', () => {
   const authUser = ref<AuthUser | null>(null)

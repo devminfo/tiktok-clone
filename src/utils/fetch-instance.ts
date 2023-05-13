@@ -1,11 +1,10 @@
-import { FetchInstanceOptions } from '~types/fetch.type'
-
-const { getAcToken } = useAuthStore()
+import { FetchInstanceOptions } from '../types/fetch.type'
 
 export const fetchInstance = <DataT>(
   endpoint: string,
   fetchOptions?: FetchInstanceOptions
 ) => {
+  const { getAcToken } = useAuthStore()
   const { isAuth = false, ...opts } = fetchOptions || {}
 
   // Check and add access token to header

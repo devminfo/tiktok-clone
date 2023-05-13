@@ -1,13 +1,13 @@
-import { AuthType } from '~enums/auth-type'
-import { Gender } from '~enums/gender'
-import { Role } from '~enums/role'
+import { AuthType } from '../enums/auth-type'
+import { Gender } from '../enums/gender'
+import { Role } from '../enums/role'
 
 export type User = {
   email?: string
   phone?: string
   username?: string
-  authKey?: string
-  authType: AuthType
+  avatar?: string
+  bio?: string
 
   _id: string
   fullName: string
@@ -19,4 +19,7 @@ export type User = {
   enableFcm: boolean
   role: Role
   deleted: boolean
+
+  posts?: any[]
+  allLikes?: any[]
 }

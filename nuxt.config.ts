@@ -1,11 +1,9 @@
 export default defineNuxtConfig({
   srcDir: 'src/',
   imports: {
-    dirs: ['stores/**'],
+    dirs: ['stores/**', 'helpers/**'],
   },
-  alias: {
-    '@types': '/<rootDir>/types',
-  },
+  alias: {},
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -13,7 +11,13 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/css/main.css'],
-  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@pinia/nuxt'],
+  modules: [
+    '@vueuse/nuxt',
+    '@unocss/nuxt',
+    '@pinia/nuxt',
+    'nuxt-icon',
+    '@pinia-plugin-persistedstate/nuxt',
+  ],
   ssr: false,
   runtimeConfig: {
     app: {},
